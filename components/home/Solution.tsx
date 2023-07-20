@@ -60,6 +60,17 @@ const Solution = () => {
             <li>Define event categories andtracks.</li>
           </ul>
         </div>
+        <div className="grid">
+          <h4>Event Creation and Management</h4>
+          <ul>
+            <li>
+              Create and manage multiple events and expos from a single
+              platform.
+            </li>
+            <li>Set event dates, times and locations.</li>
+            <li>Define event categories andtracks.</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
