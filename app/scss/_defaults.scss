@@ -19,6 +19,10 @@ body {
 ol,
 ul {
   list-style: none;
+  li {
+    font-family: $montserrat-medium;
+    font-size: 14px;
+  }
 }
 
 a {

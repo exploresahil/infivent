@@ -1,35 +1,37 @@
 @use "./variables" as *;
 
 header {
-    width: 100vw;
-    height: 100px;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 10vw;
+  z-index: 999;
+  position: relative;
+
+  .logo-main {
     display: flex;
     align-items: center;
-    padding: 0 10vw;
-    z-index: 999;
-    position: relative;
+    gap: 10px;
 
-    .logo-main {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    .logo-container {
+      position: relative;
+      height: 20px;
+      width: 30px;
 
-        .logo-container {
-            position: relative;
-            height: 40px;
-            width: 60px;
-
-            img {
-                inset: 0;
-                object-fit: contain;
-                height: 100%;
-                width: 100%;
-            }
-        }
-
-        h2 {
-            color: $light;
-        }
+      img {
+        inset: 0;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
     }
 
+    h2 {
+      color: $light;
+      font-size: 1.2rem;
+      font-family: $montserrat-semibold;
+      letter-spacing: 0.5px;
+    }
+  }
 }

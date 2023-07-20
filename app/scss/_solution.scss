@@ -1,15 +1,31 @@
 @use "./variables" as *;
 
 .solution-section {
-    background: $conic;
-    color: $light;
-    padding: 10vh 10vw;
-    width: 100vw;
+  background: $conic;
+  color: $light;
+  padding: 10vh 10vw;
+  width: 100vw;
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100vw;
-        justify-content: space-between;
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    row-gap: 50px;
+    justify-content: space-between;
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 60%;
+
+      ul {
+        list-style: disc;
+      }
     }
+  }
 }
