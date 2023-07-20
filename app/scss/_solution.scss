@@ -1,0 +1,15 @@
+@use "./variables" as *;
+
+.solution-section {
+    background: $conic;
+    color: $light;
+    padding: 10vh 10vw;
+    width: 100vw;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw;
+        justify-content: space-between;
+    }
+}
