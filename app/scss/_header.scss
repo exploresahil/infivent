@@ -16,8 +16,8 @@ header {
 
     .logo-container {
       position: relative;
-      height: 20px;
-      width: 30px;
+      height: 40px;
+      width: 50px;
 
       img {
         inset: 0;
@@ -29,8 +29,8 @@ header {
 
     h2 {
       color: $light;
-      font-size: 1.2rem;
-      font-family: $montserrat-semibold;
+      font-size: 2rem;
+      font-family: $montserrat-regular;
       letter-spacing: 0.5px;
     }
   }
