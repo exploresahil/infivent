@@ -1,10 +1,28 @@
-import React from "react";
+"use client"
+
+import React, { useEffect } from "react";
 import { BsChatLeft } from "react-icons/bs";
 import { LuPaintBucket, LuPlug } from "react-icons/lu";
 import { MdLocationSearching } from "react-icons/md";
 import { AiOutlineMobile } from "react-icons/ai";
+import { useState } from "react";
+import { featuresType } from '@/types/features-type';
+import { getFeatures } from "@/sanity/sanity-utils";
 
 function Features() {
+  const [isfeatures, setIsfeatures] = useState<featuresType[]>([]);
+
+  useEffect(() => {
+    async function fetchFeatures() {
+      const features = await getFeatures();
+      setIsfeatures(features);
+    }
+    fetchFeatures();
+
+
+  }, []);
+  console.log(isfeatures)
+
   return (
     <div className="feature-section">
       <div className="fetaures-title">
