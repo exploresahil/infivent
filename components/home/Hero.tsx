@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <div className="hero-section">
       <div className="bg-container">
-        <Image fill alt="" src={bg} />
+        <Image sizes="100%" fill alt="" src={bg} />
       </div>
 
       {heros.map((hero) => (
@@ -41,7 +41,7 @@ const Hero = () => {
 
       <div className="heroimg-cont">
         <div className="hero-img">
-          <Image fill alt="" src={heroimg} />
+          <Image sizes="100%" fill alt="" src={heroimg} />
         </div>
       </div>
     </div>
