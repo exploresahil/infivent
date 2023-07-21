@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+.vision-main {
+  width: 100vw;
+  padding: 100px 10vw;
+  display: flex;
+  gap: 100px;
+  background-color: $appleBg;
+
+  .vision-mission-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    background: rgb(22, 75, 195);
+    background: $linear;
+    border-radius: 10px;
+    color: $light;
+
+    p {
+      line-height: 20px;
+    }
+  }
+}

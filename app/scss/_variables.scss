@@ -7,7 +7,8 @@
   src: url("./helvetica/HelveticaNowDisplay-Bold.eot");
   src: local("Helvetica Now Display Bold"),
     local("./helvetica/HelveticaNowDisplay-Bold"),
-    url("./helvetica/HelveticaNowDisplay-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./helvetica/HelveticaNowDisplay-Bold.eot?#iefix")
+      format("embedded-opentype"),
     url("./helvetica/HelveticaNowDisplay-Bold.woff2") format("woff2"),
     url("./helvetica/HelveticaNowDisplay-Bold.woff") format("woff"),
     url("./helvetica/HelveticaNowDisplay-Bold.ttf") format("truetype");
@@ -20,7 +21,8 @@
   src: url("./helvetica/HelveticaNowDisplay-Regular.eot");
   src: local("Helvetica Now Display Regular"),
     local("./helvetica/HelveticaNowDisplay-Regular"),
-    url("./helvetica/HelveticaNowDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./helvetica/HelveticaNowDisplay-Regular.eot?#iefix")
+      format("embedded-opentype"),
     url("./helvetica/HelveticaNowDisplay-Regular.woff2") format("woff2"),
     url("./helvetica/HelveticaNowDisplay-Regular.woff") format("woff"),
     url("./helvetica/HelveticaNowDisplay-Regular.ttf") format("truetype");
@@ -33,7 +35,8 @@
   src: url("./helvetica/HelveticaNowDisplay-Medium.eot");
   src: local("Helvetica Now Display Medium"),
     local("./helvetica/HelveticaNowDisplay-Medium"),
-    url("./helvetica/HelveticaNowDisplay-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./helvetica/HelveticaNowDisplay-Medium.eot?#iefix")
+      format("embedded-opentype"),
     url("./helvetica/HelveticaNowDisplay-Medium.woff2") format("woff2"),
     url("./helvetica/HelveticaNowDisplay-Medium.woff") format("woff"),
     url("./helvetica/HelveticaNowDisplay-Medium.ttf") format("truetype");
@@ -47,7 +50,8 @@
   font-family: "Montserrat Regular";
   src: url("./montserrat/Montserrat-Regular.eot");
   src: local("Montserrat Regular"), local("./montserrat/Montserrat-Regular"),
-    url("./montserrat/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./montserrat/Montserrat-Regular.eot?#iefix")
+      format("embedded-opentype"),
     url("./montserrat/Montserrat-Regular.woff2") format("woff2"),
     url("./montserrat/Montserrat-Regular.woff") format("woff"),
     url("./montserrat/Montserrat-Regular.ttf") format("truetype");
@@ -83,7 +87,8 @@
   font-family: "Montserrat SemiBold";
   src: url("./montserrat/Montserrat-SemiBold.eot");
   src: local("Montserrat SemiBold"), local("./montserrat/Montserrat-SemiBold"),
-    url("./montserrat/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("./montserrat/Montserrat-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
     url("./montserrat/Montserrat-SemiBold.woff2") format("woff2"),
     url("./montserrat/Montserrat-SemiBold.woff") format("woff"),
     url("./montserrat/Montserrat-SemiBold.ttf") format("truetype");
@@ -160,4 +165,10 @@ $blue: #4791ff;
 $yellow: #ece42e;
 $pink: #eb6ba8;
 $purple: rgba(103, 61, 188, 1);
-$conic: conic-gradient(#0D1c3e, #052e5b);
+$conic: conic-gradient(#0d1c3e, #052e5b);
+$linear: linear-gradient(
+  45deg,
+  rgba(22, 75, 195, 1) 0%,
+  rgba(185, 19, 135, 1) 100%
+);
+$appleBg: #e9e9eb;

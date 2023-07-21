@@ -10,7 +10,6 @@ const Header = () => {
           <div className="logo-container">
             <Image sizes="100%" fill src={logo} alt="" />
           </div>
-
           <h2>infivent</h2>
         </Link>
       </div>
