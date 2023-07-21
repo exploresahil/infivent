@@ -1,0 +1,48 @@
+@use "./variables" as *;
+
+.solution-section {
+  background: $conic;
+  color: $light;
+  padding: 100px 0;
+
+  h2 {
+    margin-bottom: 50px;
+    padding: 0 10vw;
+    width: 100vw;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10vw;
+    width: 100vw;
+    justify-content: space-between;
+
+    row-gap: 40px;
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 500px;
+      padding: 20px;
+      border: 1px solid $light;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+
+      &:nth-of-type(even) {
+        margin-left: 10vw;
+      }
+
+      h4 {
+        text-transform: capitalize;
+      }
+
+      ul {
+        list-style: disc;
+        opacity: 0.75;
+        margin-left: 15px;
+      }
+    }
+  }
+}
