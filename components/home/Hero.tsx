@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { MouseParallax } from "react-just-parallax";
 
-import heroimg from "@/public/png/dashboard-main.png";
-
 import { getHero } from "@/sanity/sanity-utils";
 import { heroType } from "@/types/hero-type";
 
@@ -30,20 +28,22 @@ const Hero = () => {
       </MouseParallax>
 
       {heros.map((hero) => (
-        <div key={hero._id} className="hero-text">
-          <h1>{hero.heading}</h1>
-          <p>{hero.description}</p>
-          <button type="button" onClick={() => router.push(hero.url)}>
-            Get Started
-          </button>
+        <div key={hero._id}>
+          <div className="hero-text">
+            <h1>{hero.heading}</h1>
+            <p>{hero.description}</p>
+            <button type="button" onClick={() => router.push(hero.url)}>
+              Get Started
+            </button>
+          </div>
+
+          <div className="heroimg-cont">
+            <div className="hero-img">
+              <Image sizes="100%" fill alt="" src={hero.image.url} />
+            </div>
+          </div>
         </div>
       ))}
-
-      <div className="heroimg-cont">
-        <div className="hero-img">
-          <Image sizes="100%" fill alt="" src={heroimg} />
-        </div>
-      </div>
     </div>
   );
 };

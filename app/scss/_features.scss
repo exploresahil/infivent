@@ -8,6 +8,8 @@
   align-items: center;
   gap: 50px;
 
+  color: $light;
+
   .fetaures-title {
     display: flex;
     justify-content: center;
@@ -37,6 +39,7 @@
     }
 
     .icon-container {
+      position: relative;
       background: $linear;
       height: 50px;
       width: 50px;
@@ -45,9 +48,8 @@
       justify-content: center;
       border-radius: 5px;
 
-      svg {
-        font-size: 23px;
-        color: $light;
+      img {
+        object-fit: contain;
       }
     }
   }

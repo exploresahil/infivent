@@ -1,24 +1,24 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { BsChatLeft } from "react-icons/bs";
-import { LuPaintBucket, LuPlug } from "react-icons/lu";
-import { MdLocationSearching } from "react-icons/md";
-import { AiOutlineMobile } from "react-icons/ai";
-import { useState } from "react";
+import { getFeature } from "@/sanity/sanity-utils";
 import { featuresType } from "@/types/features-type";
-import { getFeatures } from "@/sanity/sanity-utils";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { PortableText } from "@portabletext/react";
 
 function Features() {
-  const [isfeatures, setIsfeatures] = useState<featuresType[]>([]);
+  const [features, setFeatures] = useState<featuresType[]>([]);
 
   useEffect(() => {
     async function fetchFeatures() {
-      const features = await getFeatures();
-      setIsfeatures(features);
+      const features = await getFeature();
+      setFeatures(features);
     }
+
     fetchFeatures();
   }, []);
+
+  //console.log(features[0].image.url);
 
   return (
     <div className="feature-section">
@@ -30,77 +30,15 @@ function Features() {
         </p>
       </div>
       <div className="grid-container">
-        <div className="card">
-          <div className="icon-container">
-            <BsChatLeft />
+        {features.map((feature) => (
+          <div key={feature._id} className="card">
+            <div className="icon-container">
+              <div className="img-container"></div>
+            </div>
+            <h3>{feature.heading}</h3>
+            <PortableText value={feature.description} />
           </div>
-          <h3>Real-time chat</h3>
-          <p>
-            Generated Lorem Ipsum Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Purus in mollis nunc sed id semper risus in.
-          </p>
-        </div>
-
-        <div className="card">
-          <div className="icon-container">
-            <LuPaintBucket />
-          </div>
-          <h3>Real-time chat</h3>
-          <p>
-            Generated Lorem Ipsum Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Purus in mollis nunc sed id semper risus in.
-          </p>
-        </div>
-
-        <div className="card">
-          <div className="icon-container">
-            <MdLocationSearching />
-          </div>
-          <h3>Real-time chat</h3>
-          <p>
-            Generated Lorem Ipsum Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Purus in mollis nunc sed id semper risus in.
-          </p>
-        </div>
-
-        <div className="card">
-          <div className="icon-container">
-            <BsChatLeft />
-          </div>
-          <h3>Real-time chat</h3>
-          <p>
-            Generated Lorem Ipsum Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Purus in mollis nunc sed id semper risus in.
-          </p>
-        </div>
-
-        <div className="card">
-          <div className="icon-container">
-            <AiOutlineMobile />
-          </div>
-          <h3>Real-time chat</h3>
-          <p>
-            Generated Lorem Ipsum Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Purus in mollis nunc sed id semper risus in.
-          </p>
-        </div>
-
-        <div className="card">
-          <div className="icon-container">
-            <LuPlug />
-          </div>
-          <h3>Real-time chat</h3>
-          <p>
-            Generated Lorem Ipsum Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Purus in mollis nunc sed id semper risus in.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   );

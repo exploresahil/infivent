@@ -1,45 +1,7 @@
-"use client";
-
-import { useEffect } from "react";
-
 const Vision = () => {
-  useEffect(() => {
-    const visionContainer = document.getElementById("vision-container")!;
-    const visionCursor = document.getElementById("vision-cursor")!;
-
-    const missionContainer = document.getElementById("mission-container")!;
-    const missionCursor = document.getElementById("mission-cursor")!;
-
-    const handleMouseMove = (e) => {
-      const { left: visionLeft, top: visionTop } =
-        visionContainer.getBoundingClientRect();
-      const { left: missionLeft, top: missionTop } =
-        missionContainer.getBoundingClientRect();
-
-      const visionX = e.clientX - visionLeft;
-      const visionY = e.clientY - visionTop;
-
-      const missionX = e.clientX - missionLeft;
-      const missionY = e.clientY - missionTop;
-
-      visionCursor.style.left = visionX + "px";
-      visionCursor.style.top = visionY + "px";
-
-      missionCursor.style.left = missionX + "px";
-      missionCursor.style.top = missionY + "px";
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
   return (
     <div className="vision-main">
       <div id="vision-container" className="vision-mission-container">
-        <div className="cursor" id="vision-cursor" />
         <h3>
           <span>|</span> Vision
         </h3>
@@ -54,7 +16,6 @@ const Vision = () => {
         </p>
       </div>
       <div id="mission-container" className="vision-mission-container">
-        <div id="mission-cursor" className="cursor" />
         <h3>
           <div className="bg-container" />
           <span>|</span> Mission

@@ -1,11 +1,11 @@
-const hero = {
-  name: "hero",
-  title: "Hero",
+const mainFeaturesScheam = {
+  name: "mainFeatures",
+  title: "Main Features",
   type: "document",
   fields: [
     {
-      name: "heading",
-      title: "Heading",
+      name: "title",
+      title: "Title",
       type: "string",
     },
     {
@@ -13,11 +13,6 @@ const hero = {
       title: "Description",
       type: "text",
       rows: 5,
-    },
-    {
-      name: "url",
-      title: "Button URL",
-      type: "string",
     },
     {
       name: "image",
@@ -28,4 +23,4 @@ const hero = {
   ],
 };
 
-export default hero;
+export default mainFeaturesScheam;

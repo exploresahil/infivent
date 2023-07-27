@@ -1,9 +1,8 @@
-export type heroType = {
+export type mainFeaturesType = {
   _id: string;
   _createdAt: Date;
-  heading: string;
+  title: string;
   description: string;
-  url: string;
   image: {
     url: string;
   };

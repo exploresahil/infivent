@@ -5,8 +5,9 @@ html {
 }
 
 body {
-  background-color: $light;
+  background-color: $dark;
   font-family: $montserrat-regular;
+  color: $light;
 }
 
 *,
@@ -79,6 +80,7 @@ h4 {
 p {
   font-family: $montserrat-medium;
   font-size: 14px;
+  line-height: 2;
 }
 
 .title {
