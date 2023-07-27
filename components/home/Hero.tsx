@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { MouseParallax } from "react-just-parallax";
 
-import bg from "@/public/png/hero-bg.png";
-import heroimg from "@/public/png/Mask group.png";
+import heroimg from "@/public/png/dashboard-main.png";
 
 import { getHero } from "@/sanity/sanity-utils";
 import { heroType } from "@/types/hero-type";
@@ -25,9 +25,9 @@ const Hero = () => {
 
   return (
     <div className="hero-section">
-      <div className="bg-container">
-        <Image sizes="100%" fill alt="" src={bg} />
-      </div>
+      <MouseParallax enableOnTouchDevice isAbsolutelyPositioned strength={0.1}>
+        <div className="bg-container" />
+      </MouseParallax>
 
       {heros.map((hero) => (
         <div key={hero._id} className="hero-text">
