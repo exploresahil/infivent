@@ -28,7 +28,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    gap: 100px;
     padding: 50px 0;
     row-gap: 100px;
 
@@ -36,20 +36,30 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-    }
 
-    .icon-container {
-      position: relative;
-      background: $linear;
-      height: 50px;
-      width: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
+      .icon-container {
+        position: relative;
+        background: $linear;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
 
-      img {
-        object-fit: contain;
+        .img-container {
+          position: relative;
+          width: 30px;
+          height: 30px;
+
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+
+      p {
+        line-height: 1.5;
       }
     }
   }

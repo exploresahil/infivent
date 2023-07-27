@@ -7,6 +7,7 @@ const features = {
       name: "image",
       title: "Icon",
       type: "image",
+      options: { hotspot: true },
     },
     {
       name: "heading",

@@ -18,8 +18,6 @@ function Features() {
     fetchFeatures();
   }, []);
 
-  //console.log(features[0].image.url);
-
   return (
     <div className="feature-section">
       <div className="fetaures-title">
@@ -33,7 +31,14 @@ function Features() {
         {features.map((feature) => (
           <div key={feature._id} className="card">
             <div className="icon-container">
-              <div className="img-container"></div>
+              <div className="img-container">
+                <Image
+                  sizes="100%"
+                  fill
+                  alt={feature.heading}
+                  src={feature.image.url}
+                />
+              </div>
             </div>
             <h3>{feature.heading}</h3>
             <PortableText value={feature.description} />
