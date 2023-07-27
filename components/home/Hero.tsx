@@ -23,7 +23,7 @@ const Hero = () => {
 
   return (
     <div className="hero-section">
-      <MouseParallax enableOnTouchDevice isAbsolutelyPositioned strength={0.1}>
+      <MouseParallax enableOnTouchDevice isAbsolutelyPositioned strength={0.2}>
         <div className="bg-container" />
       </MouseParallax>
 
