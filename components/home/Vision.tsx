@@ -1,7 +1,12 @@
 const Vision = () => {
   return (
     <div className="vision-main">
-      <div id="vision-container" className="vision-mission-container">
+      <div
+        id="vision-container"
+        data-aos="fade-right"
+        data-aos-delay="50"
+        className="vision-mission-container"
+      >
         <h3>
           <span>|</span> Vision
         </h3>
@@ -15,7 +20,12 @@ const Vision = () => {
           worldwide.
         </p>
       </div>
-      <div id="mission-container" className="vision-mission-container">
+      <div
+        id="mission-container"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        className="vision-mission-container"
+      >
         <h3>
           <div className="bg-container" />
           <span>|</span> Mission

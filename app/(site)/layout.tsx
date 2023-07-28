@@ -2,6 +2,7 @@ import "@/app/scss/globals.scss";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
+import "aos/dist/aos.css";
 
 export const metadata: Metadata = {
   title: "infivent",

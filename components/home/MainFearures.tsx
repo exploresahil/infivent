@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-
-import image from "@/public/png/dashboard-main.png";
 import { BsFillCaretDownFill } from "react-icons/bs";
 
 import { getMainFeature } from "@/sanity/sanity-utils";
@@ -30,13 +28,16 @@ function MainFearures() {
       {mainFeatures.map((mainFeature) => (
         <div id={mainFeature._id} className="main-features">
           <div className="text-container">
-            <h3>{mainFeature.title}</h3>
-            <p>{mainFeature.description}</p>
+            <h3 data-aos="flip-up">{mainFeature.title}</h3>
+            <p data-aos="flip-up" data-aos-delay="100">
+              {mainFeature.description}
+            </p>
           </div>
           <div className="img-container">
             <Image
               sizes="100%"
               fill
+              data-aos="flip-up"
               alt={mainFeature.title}
               src={mainFeature.image.url}
             />
